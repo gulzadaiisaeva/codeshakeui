@@ -1,0 +1,30 @@
+<h2>User list</h2>
+
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>roleType</th>
+            <th>federationId</th>
+            <th>operationStatus</th>
+            <th>operationType</th>
+            <th>processTime</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td> {{user.userId}} </td>
+            <td> {{user.email}} </td>
+            <td> {{user.name}} </td>
+            <td> {{user.roleType}} </td>
+            <td> {{user.federationId}} </td>
+            <td> {{user.operationStatus}} </td>
+            <td> {{user.operationType}} </td>
+            <td> {{user.processTime}} </td>
+        </tr>
+    </tbody>
+</table>
